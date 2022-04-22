@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ICE3_ST10120981_Thaveshan_Naidoo_PropertyApp/1.0.0": {
+        "runtime": {
+          "ICE3_ST10120981_Thaveshan_Naidoo_PropertyApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ICE3_ST10120981_Thaveshan_Naidoo_PropertyApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

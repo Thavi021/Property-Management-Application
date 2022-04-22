@@ -1,0 +1,109 @@
+﻿<Window x:Class="ICE3_ST10120981_Thaveshan_Naidoo_PropertyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICE3_ST10120981_Thaveshan_Naidoo_PropertyApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="29*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl x:Name="myTabControl" Margin="0,0,0,-135" Grid.ColumnSpan="2">
+
+
+
+            <TabItem Header="MainMenu">
+                <StackPanel>
+
+                    <Label Content="ST10120981 - Thaveshan Naidoo - ICE 3 _ PROG7311" FontSize="36" FontFamily="Niagara Engraved"/>
+                    <Label Content="Property Management Application. "/>
+
+                    <Button x:Name="MenuButtonCU" Height="44" Click="MenuButtonCU_Click" Content="Create A New User"/>
+                    <Button x:Name="MenuButtonLI"  Content="Login as existing " Height="45" Click="MenuButtonLI_Click"/>
+                    <Button x:Name="MenuButtonCL"  Content="Create New Property Listing" Height="55" Click="MenuButtonCL_Click"/>
+                    <Button x:Name="MenuButtonVL"  Content="View Available Property Listings" Height="65" Click="MenuButtonVL_Click"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="CreateUser">
+                <StackPanel>
+                    <Label Content="Create User" FontWeight="Bold"/>
+                    <Label Content="UserName:"/>
+                    <TextBox x:Name="NewUserName" Text="@" TextWrapping="Wrap" Height="23" Width="642"/>
+                    <Label Content="Password:" RenderTransformOrigin="-1.722,0.815"/>
+                    <TextBox x:Name="NewPassword" Text="***" Width="637" Height="25" RenderTransformOrigin="0.5,0.5"/>
+
+
+                    <Button x:Name="CreateUserButton"  Content="Create User" Width="486" Height="143" Click="CreateUserButton_Click_1"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="LoginUser">
+                <StackPanel>
+
+
+                    <Label Content="UserName:"/>
+                    <TextBox x:Name="LoginBox" Text="@" TextWrapping="Wrap" Width="642" Height="30"/>
+                    <Label Content="Password:"/>
+                    <TextBox x:Name="LoginPasswordBox" Text="" TextWrapping="Wrap" Width="642" Height="24"/>
+                    <Button Content="Login" Height="100" Width="482" Click="Button_Click"/>
+
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="CreateListing">
+                <StackPanel Height="544">
+                    <Label Content="Create Property To Post For Sale:" Width="201" FontWeight="Bold"/>
+                    <Label Content="Property For Sale Location:"/>
+                    <TextBox x:Name="Location" Text="Unit,Street,Suburb,City,Province,Country. Postal Code" TextWrapping="Wrap" Width="242" Height="39"/>
+                    <Label Content="How Many Bathrooms?"/>
+                    <TextBox x:Name="Bathrooms" Text="1" TextWrapping="Wrap" Width="71"/>
+                    <Label Content="Property Discription:"/>
+                    <TextBox x:Name="PropertyDiscription" Text="Discribe Your Property..." TextWrapping="Wrap" Width="517" Height="33"/>
+                    <Label Content="How Many Bedrooms?"/>
+                    <TextBox x:Name="BedroomsTB" Text="1" TextWrapping="Wrap" Width="71"/>
+
+                    <CheckBox x:Name="PoolCB" Content="Pool"/>
+                    <CheckBox x:Name="PetsCB" Content="Allow Pets"/>
+                    <CheckBox x:Name="GarageCB" Content="Garage"/>
+                    <Label Content="How Many Car Garage or parking spaces?"/>
+                    <TextBox x:Name="GarageSpace" Text="0" TextWrapping="Wrap" Width="34"/>
+                    <Label Content="How Many Meters Squared? "/>
+                    <TextBox x:Name="m2" Text="1000" TextWrapping="Wrap" Width="71"/>
+                    <Label Content="Price: "/>
+                    <TextBox x:Name="PriceTB" Text="R" TextWrapping="Wrap" Width="108"/>
+                    <Button x:Name="AddProp" Content="Add new Property" Height="25" Width="206" Click="AddProp_Click" />
+                    <Button x:Name="ViewPropForSale" Content="View Available Listings" Click="ViewPropForSale_Click"/>
+
+                </StackPanel>
+            </TabItem>
+
+
+
+            <TabItem Header="ViewSelectedListing">
+                <StackPanel>
+                    <Label Content="The following properties are available for sale:" FontWeight="Bold"/>
+                    <ListView x:Name="ListView1" Height="253">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Label Content="Enter The listing number then click the button below to view the property listing:"/>
+                    <TextBox x:Name="Count" Text="1" TextWrapping="Wrap" Width="120"/>
+                    <Button x:Name="ViewPropMessage" Content="View Property Details" Height="53" Width="122" Click="ViewPropMessage_Click"/>
+                    <Button x:Name="GoBackButton" Content="Add Property" Height="53" Width="122" Click="GoBackButton_Click"  />
+
+
+                </StackPanel>
+            </TabItem>
+
+
+
+        </TabControl>
+    </Grid>
+</Window>
